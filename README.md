@@ -26,7 +26,7 @@ Quick explanation of how this neural network works
 4. In testing aka inference (simulating when a single customer does a payment etc); expose neural network to unlabelled transactions. 
     * Neural network then produces a float value between 0 and 1 for each unlabelled transaction, where value closer to 1 indicates prediction of fraud, while closer to 0 indicates non-fraud.
 
-See [this seminar lead by G.Bennett Bennett, concerning basic artificial neural networks](temp_repo_url/GOD_AI_Seminar.pdf).
+See [this seminar lead by G.Bennett Bennett, concerning basic artificial neural networks](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/GOD_AI_Seminar.pdf).
 
 
 
@@ -64,9 +64,9 @@ Uses python 3.6.3, Requires tensorflow 2.6.2, keras, matplotlib, pandas, sklearn
 Installation
 ==============
 
-1. Download [my repository](temp_repo_url).
+1. Download [my repository](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main).
 2. Ensure training_data_masked_columns.csv_** is in data/.
-3. Install all python modules seen in [Requirements](temp_repo_url#requirements). (Open Cmd, set python37 path as PATH, then run "python -m pip install each_req_name" in same cmd)
+3. Install all python modules seen in [Requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements). (Open Cmd, set python37 path as PATH, then run "python -m pip install each_req_name" in same cmd)
 
 
 Usage
@@ -78,12 +78,12 @@ There are two ways to use this artificial neural network system:
         * Note that most columns in the data\...training_data_masked_columns.csv_** file are masked, and known to SASS payments team or other Prime related members only. You can request this information.
     * Run the trained neural network, and make some predictions.
         * **Training** is done by simply running the python file, and awaiting the neural network's processing for about 15 epochs.
-            * A successful run will look [like this image](temp_repo_url/data/95.66__bank_data_successful_run.png).
+            * A successful run will look [like this image](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/data/95.66__bank_data_successful_run.png).
         * While making a prediction, take note of the "FRAUDFLAG" column, which lables each transaction in dataset as 1 or 0 (where 1=fraud, 0=not fraudulent):
             * There are 299,999 records in dataset csv, and of those, the training process used the first 70%.
             * To really test the neural network, means to expose it to a record it didn't see in training.
             * Copy any record after cell 210,000 **(except for the last column which is the label)**. Records after 210,000 are outside of the "70%" training set.
-            * Paste the copied record into python shell after neural network training ran, as parameter "newTransactionRecordString" from function [god_ai_credit-card-fraud-detection_train_from_scratch.py](temp_repo_url/god_ai_credit-card-fraud-detection_train_from_scratch.py)/ doOnlineInferenceOnRawRecord ( newTransactionRecordString ).
+            * Paste the copied record into python shell after neural network training ran, as parameter "newTransactionRecordString" from function [god_ai_credit-card-fraud-detection_train_from_scratch.py](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/god_ai_credit-card-fraud-detection_train_from_scratch.py)/ doOnlineInferenceOnRawRecord ( newTransactionRecordString ).
             * Take note of the result.
                 * Eg a: Record A223999 is labelled 0, and neural net prediction is accurate at 0.029. (Closer to 0) See **data/notFraudulent_onlineInferenceOnRecord_sample.png**.
 				
@@ -91,9 +91,9 @@ There are two ways to use this artificial neural network system:
              
 
 2. The quicker way: Running a pretrained model prepared by myself, that doesn't require training.
-    * Run [god_ai_credit-card-fraud-detection_load_pretrained.py](temp_repo_url/god_ai_credit-card-fraud-detection_load_pretrained.py) from the data folder in this repository.
-    * Ensure [95.66%_saved_bank_neural_network_weights.h5](temp_repo_url/data/95.66__saved_bank_neural_network_weights.h5) is in the data folder of this repository.
-    * Ensure the files above are in the directory of the csv file from the "[Installation](temp_repo_url/README.md#installation)" step of this repository.
+    * Run [god_ai_credit-card-fraud-detection_load_pretrained.py](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/god_ai_credit-card-fraud-detection_load_pretrained.py) from the data folder in this repository.
+    * Ensure [95.66%_saved_bank_neural_network_weights.h5](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/data/95.66__saved_bank_neural_network_weights.h5) is in the data folder of this repository.
+    * Ensure the files above are in the directory of the csv file from the "[Installation](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/README.md#installation)" step of this repository.
     * To make predictions, do the same steps done in the training phase above, **particularly, starting from** "Run the trained neural network...".
 
 
@@ -113,7 +113,7 @@ It is important to guage how well an ai model is doing, in ai research and imple
 
 
 
-Invoking the function "showConfusionMatrix()" in [god_ai_credit-card-fraud-detection_train_from_scratch.py](temp_repo_url/god_ai_credit-card-fraud-detection_train_from_scratch.py) reveals the confusion matrix:
+Invoking the function "showConfusionMatrix()" in [god_ai_credit-card-fraud-detection_train_from_scratch.py](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/god_ai_credit-card-fraud-detection_train_from_scratch.py) reveals the confusion matrix:
 
 
 ![alt text](data/95.66__bank_data_confusion_matrix.png "Title Text")
