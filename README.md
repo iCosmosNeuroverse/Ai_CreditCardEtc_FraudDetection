@@ -1,7 +1,7 @@
 About
 ==============
 
-![alt text](data/prediction_on_a_single_entry.png "Title Text")
+![alt text]( https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/blob/main/data/prediction%20on%20a%20single%20entry.png "Title Text")
 
 This project seeks to supplement current Fraud Guard method with neural network based code/method that I prepared/wrote, for the goal/purpose of [improved fraud detection by > 50%](http://news.mit.edu/2018/machine-learning-financial-credit-card-fraud-0920).
 
