@@ -116,7 +116,7 @@ It is important to guage how well an ai model is doing, in ai research and imple
 Invoking the function "showConfusionMatrix()" in [god_ai_credit-card-fraud-detection_train_from_scratch.py](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/god_ai_credit-card-fraud-detection_train_from_scratch.py) reveals the confusion matrix:
 
 
-![alt text](data/95.66__bank_data_confusion_matrix.png "Title Text")
+![alt text](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/blob/main/data/95.66%25_bank_data_confusion_matrix.png "Title Text")
 
 
 
