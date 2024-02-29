@@ -179,6 +179,32 @@ imputer.fit(uX)
 iuX = imputer.transform(uX)
 
 
+##################################
+# funct form read unseen dataset, do predictions on resulting variable, where each index corresponds to each row
+# expects field CARDFLAGFRAUD as fraud column. Can be dynamic, but left as a standard for now.
+# eg: dat=PROCESS_DATA( "data/unseen_transactions_csv.csv")
+def PROCESS_DATA(transaction_file_loc):
+       uData = pd.read_csv(transaction_file_loc)
+       uX = uData.drop('FRAUDFLAG',axis=1)
+       #uX = sc.fit_transform(uX) #issue with this is that, it seems to destroy the feature set. Seems to render nn prediction as all 0s
+       #alternative is to do imputation on the non fitted uX data, which is possible although it's not directly iterable without being fitted, then
+       #conver the resulting imputed array as a string, followed by consumption by RawRecord inference "doOnlineInferenceOnRawRecord"
+
+
+       #Removes "nan" numbers replaces with appropriate mean of surrounding values
+
+       # Create an imputer object with strategy 'mean'
+       imputer = IterativeImputer()
+
+       # Fit the imputer to the data
+       imputer.fit(uX)
+
+       # Transform the data
+       iuX = imputer.transform(uX)
+
+       return iuX
+
+
 ##converts imputed excel data
 ##eg iuX[0] is  valid input for consumable function
 #Input to doOnlineInferenceOnRawRecord
