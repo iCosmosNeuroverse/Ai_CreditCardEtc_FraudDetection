@@ -1,6 +1,19 @@
 About
 ==============
 
+
+
+Using GUI "LAUNCH_JNCB_AI_FRAUD_ANALYSER.bat"
+======
+![alt text](GUI_SCREEN.png "Title Text")
+
+Run batch launcher, use file icon to load transactions and generate predictions, and the plane icon to save predictions.
+Big X Icon toggling, clears predictions. Predictions are saved to predictions.txt file.
+
+
+Using PythonShelll "god_ai_credit_card_fraud_detection_load_pretrained.py"
+======
+
 ![alt text]( https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/blob/main/data/prediction%20on%20a%20single%20entry.png "Title Text")
 
 This project seeks to supplement current Fraud Guard method with neural network based code/method that I prepared/wrote, for the goal/purpose of [improved fraud detection by > 50%](http://news.mit.edu/2018/machine-learning-financial-credit-card-fraud-0920).
