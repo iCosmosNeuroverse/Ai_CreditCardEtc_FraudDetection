@@ -122,7 +122,7 @@ It is important to guage how well an ai model is doing, in ai research and imple
 5. Overall accuray, as a function of the 4 items above.
     * **Total transactions** = false positives + false negatives + true positives + true negatives = (3708 + 197 + 533 + 85562) = 90,000
     * **Total correct predictions** or ‘true items’ = (true positives + true negatives )/Total transactions = (533 + 85562)/90,000 = 0.95661111111 ~ 95% accuracy
-    * **Total incorrect predictions** or MME or ‘false items’ = (false positives + false negatives)/Total = (3708 + 197)/90000 = (3708 + 197)/90000 ~ 0.043% inaccuracy. This is better than the standard of around 0.1. [>= 0.1 may signify bad performance](https://fraud-detection-handbook.github.io/fraud-detection-handbook/Chapter_4_PerformanceMetrics/ThresholdBased.html).
+    * **Total incorrect predictions** or MME ~ Mean Misclassification Error or ‘false items’ = (false positives + false negatives)/Total = (3708 + 197)/90000 = (3708 + 197)/90000 ~ 0.043% inaccuracy. This is better than the standard of around 0.1. [>= 0.1 may signify bad performance](https://fraud-detection-handbook.github.io/fraud-detection-handbook/Chapter_4_PerformanceMetrics/ThresholdBased.html).
 
 
 Invoking the function "showConfusionMatrix()" in [god_ai_credit_card_fraud_detection_train_from_scratch.py](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/god_ai_credit_card_fraud_detection_train_from_scratch.py) reveals the confusion matrix:
