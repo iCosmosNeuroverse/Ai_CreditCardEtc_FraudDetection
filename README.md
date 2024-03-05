@@ -79,7 +79,7 @@ Installation
 
 1. Download [my repository](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main).
 2. Download  BANK [training_data.csv](https://drive.google.com/file/d/1jWUotyygDzeSN2uVtVjO9S2RX6OVqBDO/view?usp=sharing), copy to data/ folder.
-3. Install all python modules seen in [Requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements). (Open Cmd, set python37 path as PATH, then run "python -m pip install each_req_name" in same cmd)
+3. Install all python modules seen in [Requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements). (Open Cmd, set python36 path as PATH, then run "python -m pip install each_req_name" in same cmd)
 
 
 Usage
