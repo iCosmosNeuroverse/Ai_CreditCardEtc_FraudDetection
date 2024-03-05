@@ -78,7 +78,7 @@ Installation
 ==============
 
 1. Download [my repository](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main).
-2. Ensure training_data_masked_columns.csv_** is in data/.
+2. Download  BANK [training_data.csv](https://drive.google.com/file/d/1jWUotyygDzeSN2uVtVjO9S2RX6OVqBDO/view?usp=sharing), copy to data/ folder.
 3. Install all python modules seen in [Requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements). (Open Cmd, set python37 path as PATH, then run "python -m pip install each_req_name" in same cmd)
 
 
@@ -88,7 +88,7 @@ There are two ways to use this artificial neural network system:
 
 1. Training and running.
     * **Train** the neural network (in about 3 minutes on an i7 cpu typical corporate laptop) on the csv sample masked bank transaction dev data. 
-        * Note that most columns in the data\...training_data_masked_columns.csv_** file are masked, and known to SASS payments team or other Prime related members only. You can request this information.
+        * Note that most columns in the data\...training_data.csv_** file are masked, and known to SASS payments team or other Prime related members only. You can request this information.
     * Run the trained neural network, and make some predictions.
         * **Training** is done by simply running the python file, and awaiting the neural network's processing for about 15 epochs.
             * A successful run will look [like this image](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/data/95.66__bank_data_successful_run.png).
