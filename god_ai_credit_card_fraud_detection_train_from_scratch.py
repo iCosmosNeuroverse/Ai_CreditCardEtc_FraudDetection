@@ -36,7 +36,7 @@ print("...training neural network on jncb dev transaction data" );
 
 # read data
 
-data = pd.read_csv('data/export_300k_v2_maskedNcbColumns.csv') #Edited by God Bennett  to point to local creditcard directory
+data = pd.read_csv('data/_training_data.csv') #Edited by God Bennett  to point to local creditcard directory
 
 
 ###############################################God Bennett _function_0
@@ -73,11 +73,11 @@ def plotFraudVsNonFraudVisualization_Histogram_WrtDataset ( ):
 
        bins = 40
 
-       ax1.hist(data.AMOUNT[data.CARDFLAGFRAUD == 1.0], bins = bins, density = True, alpha = 0.75, color = 'red')
-       ax1.set_title(('Frauds: ~ ' + str(len(data[data.CARDFLAGFRAUD == 1.0]))), color='red')
+       ax1.hist(data.AMOUNT[data.FRAUDFLAG == 1.0], bins = bins, density = True, alpha = 0.75, color = 'red')
+       ax1.set_title(('Frauds: ~ ' + str(len(data[data.FRAUDFLAG == 1.0]))), color='red')
 
-       ax2.hist(data.AMOUNT[data.CARDFLAGFRAUD == 0.0], bins = bins, density = True, alpha = 0.5, color = 'blue')
-       ax2.set_title(('Non Frauds: ~ ' + str(len(data[data.CARDFLAGFRAUD == 0.0]))), color='blue')
+       ax2.hist(data.AMOUNT[data.FRAUDFLAG == 0.0], bins = bins, density = True, alpha = 0.5, color = 'blue')
+       ax2.set_title(('Non Frauds: ~ ' + str(len(data[data.FRAUDFLAG == 0.0]))), color='blue')
        
 
        plt.xlabel('Amount')
@@ -98,8 +98,8 @@ batchCount = 10 ##default: 10
 ###############################################begin original_code 
 # define features and target
 
-X = data.drop('CARDFLAGFRAUD',axis=1)
-y = data['CARDFLAGFRAUD']
+X = data.drop('FRAUDFLAG',axis=1)
+y = data['FRAUDFLAG']
 
 
 
@@ -181,7 +181,7 @@ predictions.to_csv("predictions.csv") #store predictions
 """
 #includes ground truth data, that is what is predicted versus what actually is true of the training data
 #may not make sense, because the ground truths may be ordered differently from the prediction set.
-groundTruths = np.array(data['CARDFLAGFRAUD'])
+groundTruths = np.array(data['FRAUDFLAG'])
 groundTruthDataFrame = pd.DataFrame({'Prediction':groundTruths})
 predictionsPlusGroundTruth = pd.concat([predictions,groundTruthDataFrame], axis=1)
 predictionsPlusGroundTruth.to_csv("predictionsPlusGroundTruth.csv") #store predictions
@@ -258,7 +258,7 @@ examplePreOrganizedRecord=np.array([[596721,0,98,0,0,99,0,1,1,111012.41,-308492.
 #The example record above is line 180810 from creditcard.csv (aka entry 180808 based on physical count of items in creditcard.csv file)
 def doOnlineInferenceOnPreOrganizedRecord ( newTransactionRecord ):
 	#create copy of input set X
-	X_copy = data.drop('CARDFLAGFRAUD',axis=1)
+	X_copy = data.drop('FRAUDFLAG',axis=1)
 	#grow copy by new newTransactionRecord
 	X_grown = np.append ( X_copy, newTransactionRecord, axis=0)
 	#refit copy (aka X_grown) with respect to rest of input set
@@ -291,7 +291,7 @@ def doOnlineInferenceOnRawRecord ( newTransactionRecordString ):
        #convert string to array for use in single observation prediction
        newTransactionRecord = [[float(item) for item in newTransactionRecordString_commaFormat.split ( "," )]]
        #create copy of input set X
-       X_copy = data.drop('CARDFLAGFRAUD',axis=1)
+       X_copy = data.drop('FRAUDFLAG',axis=1)
        #grow copy by new newTransactionRecord
        X_grown = np.append ( X_copy, newTransactionRecord, axis=0)
        #refit copy (aka X_grown) with respect to rest of input set
