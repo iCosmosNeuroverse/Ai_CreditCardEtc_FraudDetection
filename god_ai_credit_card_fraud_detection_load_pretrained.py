@@ -9,7 +9,7 @@ import numpy as np
 inputDimensions = 65 ##Corresponds to number of non-class columns in ncb input data file.
 
 # read dataset
-data = pd.read_csv('data/training_data.csv') 
+data = pd.read_csv('data/_training_data.csv') 
 
 # create model based on saved weights
 model = load_model('data/95.66%_saved_BANK_neural_network_weights.h5')
@@ -157,7 +157,7 @@ def stn(string):
 
 ##################################
 # read unseen dataset, do predictions on resulting variable, where each index corresponds to each row
-uData = pd.read_csv('data/unseen_transactions_csv.csv')
+uData = pd.read_csv('data/_unseen_transactions_sample_1.csv')
 uX = uData.drop('FRAUDFLAG',axis=1)
 #uX = sc.fit_transform(uX) #issue with this is that, it seems to destroy the feature set. Seems to render nn prediction as all 0s
 #alternative is to do imputation on the non fitted uX data, which is possible although it's not directly iterable without being fitted, then
