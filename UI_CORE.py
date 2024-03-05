@@ -216,7 +216,7 @@ class NcbAiFraudAnalyser(QWidget):
 
         def getPrediction (value):
             returnValue = ""
-            if value >= 0.1: #for 0.1 is basis threshold
+            if value >= 0.07: #for 0.07 is basis threshold
                 returnValue = "Fraudulent"
             else:
                 returnValue = "Non-Fraudulent"
