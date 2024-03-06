@@ -9,6 +9,7 @@ Using GUI "LAUNCH_JNCB_AI_FRAUD_ANALYSER.bat"
 
 Run batch launcher, use file icon to load transactions and generate predictions, and the plane icon to save predictions.
 Big X Icon toggling, clears predictions. Predictions are saved to predictions.txt file.
+Ensure your Python36 path and not mine is the LAUNCH_JNCB_AI_FRAUD_ANALYSER.bat path.
 
 
 Using PythonShelll "god_ai_credit_card_fraud_detection_load_pretrained.py"
