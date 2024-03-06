@@ -10,6 +10,11 @@ Using GUI "LAUNCH_JNCB_AI_FRAUD_ANALYSER.bat"
 Run batch launcher, use file icon to load transactions and generate predictions, and the plane icon to save predictions.
 Big X Icon toggling, clears predictions. Predictions are saved to predictions.txt file.
 
+You can load the following files for testing:
+* data/_unseen_transactions_sample_1.csv (Unseen sample set 1, testing model generalization beyond training set)
+* data/_unseen_transactions_sample_2.csv (Unseen sample set 2, testing model generalization beyond training set)
+* data/_seen_unseen_mix_transaction_sample_1.csv (A mixture of seen and unseen samples unseen by ai in training, to test both memory and generalization)
+
 
 Using PythonShelll "god_ai_credit_card_fraud_detection_load_pretrained.py"
 ======
