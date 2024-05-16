@@ -114,6 +114,7 @@ Installation (Without Admin Privileges Workaround)
 9. Download [my tkinter admin package](https://drive.google.com/file/d/135IGF7s5YAub1UxB6pqy34qK_ANFAmvj/view?usp=sharing). Tkinter is ux component taken from copy of admin install of py36.
    * You can [use this third party tool](https://www.virustotal.com/gui/) to verify these cached files.
 10. Run LAUNCH_AI_FRAUD_ANALYSER.bat to launch application.
+   * You can load file data/_unseen_transactions_sample_1.csv for eg, with first button left, then wait while "processing" is on screen, for results. You can clear results with X/middle button before processing other samples.
 
 
 
