@@ -91,7 +91,7 @@ Installation (With Admin Privileges)
 3. Install all python modules seen in [Requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements). (Open Cmd, set python36 path as PATH, then run "python -m pip install each_req_name" in same cmd)
 4. Ensure your Python36 path and not mine is the LAUNCH_JNCB_AI_FRAUD_ANALYSER.bat path.
 
-Installation (Without Admin Workaround)
+Installation (Without Admin Preivileges Workaround)
 ==============
 
 1. Download [Embeddable zip x86-64 zip file](https://www.python.org/ftp/python/3.6.3/python-3.6.3-embed-amd64.zip). (Unzip, no admin required for install)
@@ -100,10 +100,11 @@ Installation (Without Admin Workaround)
    * I also provided my cached copy of pip from the admin based install, because other instructions tend to have outdated data that doesn't work.
 4. In your extracted (1) folder, create dir and subdir: lib/site-packages.
    * Copy (2)'s extracted zip such that each folder is directly under site-packages.
-5. In cmd, install Requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements) as usual by
+5. In notepad, open (1)/python36._pth, and add line at top right above "python36.zip".
+6. In cmd, install [Requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements) as usual by
    a. 1st setting path to (1) 
    b. using python -m pip <each_requirement> as normal.
-   * Eg: python -m pip install tensorflow==2.6.2
+   * Eg: python -m pip install tensorflow==2.6.2 (Install other requirements, though by default tensorflow install should add some of the requirements.
 
 
 Usage
