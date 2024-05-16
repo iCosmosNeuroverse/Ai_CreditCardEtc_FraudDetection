@@ -83,13 +83,25 @@ Uses python 3.6.3, Requires tensorflow 2.6.2, keras, matplotlib, pandas, sklearn
 
 
 
-Installation
+Installation (With Admin Priveleges)
 ==============
 
 1. Download [my repository](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main).
 2. Download  BANK [training_data.csv](https://drive.google.com/file/d/1jWUotyygDzeSN2uVtVjO9S2RX6OVqBDO/view?usp=sharing), copy to data/ folder.
 3. Install all python modules seen in [Requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements). (Open Cmd, set python36 path as PATH, then run "python -m pip install each_req_name" in same cmd)
 4. Ensure your Python36 path and not mine is the LAUNCH_JNCB_AI_FRAUD_ANALYSER.bat path.
+
+Installation (Without Admin Workaround)
+1. Download [Embeddable zip x86-64 zip file](https://www.python.org/ftp/python/3.6.3/python-3.6.3-embed-amd64.zip). (Unzip, no admin required for install)
+2. Download [my cached copy of the non-embeddable pip installer](https://drive.google.com/file/d/19UgUkwO2HA97Tn2JKk3jbvrcUp6qYI9i/view?usp=sharing) taken from 3.6.8 which works in 3.6.3 embedded. (This is needed to still install python modules seen in requirements section.)
+   * Note that this little workaround is needed because Embeddable does not support pip installer by default.
+   * I also provided my cached copy of pip from the admin based install, because other instructions tend to have outdated data that doesn't work.
+4. In your extracted (1) folder, create dir and subdir: lib/site-packages.
+   * Copy (2)'s extracted zip such that each folder is directly under site-packages.
+5. In cmd, install Requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements) as usual by
+   a. 1st setting path to (1) 
+   b. using python -m pip <each_requirement> as normal.
+   * Eg: python -m pip install tensorflow==2.6.2
 
 
 Usage
