@@ -1,10 +1,12 @@
 About
 ==============
 
+# JNCB ~ Jamaica Neural Network Credit Card Bank - Ai System
 
-
-Using GUI "LAUNCH_AI_FRAUD_ANALYSER.bat"
+Using GUI "LAUNCH_JNCB_AI_FRAUD_ANALYSER.bat"
 ======
+
+
 ![alt text](GUI_SCREEN.png "Title Text")
 
 Run batch launcher, use file icon to load transactions and generate predictions, and the plane icon to save predictions.
