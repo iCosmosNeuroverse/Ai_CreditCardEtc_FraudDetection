@@ -91,7 +91,7 @@ Installation (With Admin Privileges)
 3. Install all python modules seen in [Requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements). (Open Cmd, set python36 path as PATH, then run "python -m pip install each_req_name" in same cmd)
 4. Ensure your Python36 path and not mine is the LAUNCH_JNCB_AI_FRAUD_ANALYSER.bat path.
 
-Installation (Without Admin Preivileges Workaround)
+Installation (Without Admin Privileges Workaround)
 ==============
 
 1. Download [Embeddable zip x86-64 zip file](https://www.python.org/ftp/python/3.6.3/python-3.6.3-embed-amd64.zip). (Unzip, no admin required for install)
