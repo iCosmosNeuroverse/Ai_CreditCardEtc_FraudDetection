@@ -1,10 +1,11 @@
 About
 ==============
 
-# JNCB ~ Jamaica Neural Network Credit Card Bank - Ai System
-
 Using GUI "LAUNCH_JNCB_AI_FRAUD_ANALYSER.bat"
 ======
+
+~ JNCB ~ Jamaica Neural Network Credit Card Bank - Ai System
+
 
 
 ![alt text](GUI_SCREEN.png "Title Text")
@@ -78,7 +79,7 @@ G.Bennett wrote code to:
 
 Requirements
 ==============
-Uses python 3.6.3, Requires setuptools, tensorflow 2.6.2, keras, matplotlib, pandas, sklearn, seaborn, numpy installations to python.
+Uses python 3.6.3, Requires setuptools, tensorflow 2.6.2, keras, matplotlib, pandas, sklearn, seaborn, numpy, pyqt5 installations to python.
 
 
 
