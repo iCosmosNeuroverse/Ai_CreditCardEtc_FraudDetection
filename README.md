@@ -83,7 +83,7 @@ Uses python 3.6.3, Requires tensorflow 2.6.2, keras, matplotlib, pandas, sklearn
 
 
 
-Installation (With Admin Priveleges)
+Installation (With Admin Privileges)
 ==============
 
 1. Download [my repository](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main).
@@ -92,6 +92,8 @@ Installation (With Admin Priveleges)
 4. Ensure your Python36 path and not mine is the LAUNCH_JNCB_AI_FRAUD_ANALYSER.bat path.
 
 Installation (Without Admin Workaround)
+==============
+
 1. Download [Embeddable zip x86-64 zip file](https://www.python.org/ftp/python/3.6.3/python-3.6.3-embed-amd64.zip). (Unzip, no admin required for install)
 2. Download [my cached copy of the non-embeddable pip installer](https://drive.google.com/file/d/19UgUkwO2HA97Tn2JKk3jbvrcUp6qYI9i/view?usp=sharing) taken from 3.6.8 which works in 3.6.3 embedded. (This is needed to still install python modules seen in requirements section.)
    * Note that this little workaround is needed because Embeddable does not support pip installer by default.
