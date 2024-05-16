@@ -102,8 +102,11 @@ Installation (Without Admin Preivileges Workaround)
    * Copy (2)'s extracted zip such that each folder is directly under site-packages.
 5. In notepad, open (1)/python36._pth, and add line at top right above "python36.zip".
 6. In cmd, install [Requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements) as usual by
-   a. 1st setting path to (1) 
+
+   a. 1st setting path to (1)
+   
    b. using python -m pip <each_requirement> as normal.
+   
    * Eg: python -m pip install tensorflow==2.6.2 (Install other requirements, though by default tensorflow install should add some of the requirements.
 
 
