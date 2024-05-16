@@ -94,22 +94,24 @@ Installation (With Admin Privileges)
 Installation (Without Admin Privileges Workaround)
 ==============
 
-1. Download directly from python [Embeddable zip x86-64 zip file](https://www.python.org/ftp/python/3.6.3/python-3.6.3-embed-amd64.zip). (Unzip, no admin required for install)
-2. Download [my cached copy of the non-embeddable pip installer](https://drive.google.com/file/d/19UgUkwO2HA97Tn2JKk3jbvrcUp6qYI9i/view?usp=sharing) taken from 3.6.8 which works in 3.6.3 embedded. (This is needed to still install python modules seen in requirements section.) You can [use this third party tool](https://www.virustotal.com/gui/) to verify these cached files.
+1. Of course, download and extract [my repository](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main).
+2. Download python directly from python website [Embeddable zip x86-64 zip file](https://www.python.org/ftp/python/3.6.3/python-3.6.3-embed-amd64.zip). (Unzip, no admin required for install)
+3. Download  BANK [training_data.csv](https://drive.google.com/file/d/1jWUotyygDzeSN2uVtVjO9S2RX6OVqBDO/view?usp=sharing), copy to data/ folder.
+4. Download [my cached copy of the non-embeddable pip installer](https://drive.google.com/file/d/19UgUkwO2HA97Tn2JKk3jbvrcUp6qYI9i/view?usp=sharing) taken from 3.6.8 which works in 3.6.3 embedded. (This is needed to still install python modules seen in requirements section.) You can [use this third party tool](https://www.virustotal.com/gui/) to verify these cached files.
    * Note that this little workaround is needed because Embeddable does not support pip installer by default.
    * I also provided my cached copy of pip from the admin based install, because other instructions tend to have outdated data that doesn't work.
-4. In your extracted (1) folder, create dir and subdir: lib/site-packages.
+5. In your extracted (1) folder, create dir and subdir: lib/site-packages.
    * Copy (2)'s extracted zip such that each folder is directly under site-packages.
-5. In notepad, open (1)/python36._pth, and add line at top right above "python36.zip".
-6. In cmd, install [Requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements) as usual by
+6. In notepad, open (1)/python36._pth, and add line at top right above "python36.zip".
+7. In cmd, install [Requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements) as usual by
 
    a. 1st setting path to (1)
    
    b. using python -m pip <each_requirement> as normal.
    
    * Eg: python -m pip install tensorflow==2.6.2 (Install other [requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements), though by default tensorflow install should add some of the requirements.)
-7. Copy "god_ai_credit_card_fraud_detection_load_pretrained.py" and entire data folder, paste to (4)'s root which is the parent python embedded folder beside python exe.
-8. Download [my tkinter admin package](https://drive.google.com/file/d/135IGF7s5YAub1UxB6pqy34qK_ANFAmvj/view?usp=sharing). Tkinter is ux component taken from copy of admin install of py36.
+8. Copy "god_ai_credit_card_fraud_detection_load_pretrained.py" and entire data folder, paste to (4)'s root which is the parent python embedded folder beside python exe.
+9. Download [my tkinter admin package](https://drive.google.com/file/d/135IGF7s5YAub1UxB6pqy34qK_ANFAmvj/view?usp=sharing). Tkinter is ux component taken from copy of admin install of py36.
    * You can [use this third party tool](https://www.virustotal.com/gui/) to verify these cached files.
 10. Run LAUNCH_AI_FRAUD_ANALYSER.bat to launch application.
 
