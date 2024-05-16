@@ -97,8 +97,8 @@ Installation (Without Admin Privileges Workaround)
 ==============
 
 1. Of course, download and extract [my repository](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main).
-2. Download python directly from python website [Embeddable zip x86-64 zip file](https://www.python.org/ftp/python/3.6.3/python-3.6.3-embed-amd64.zip). (Unzip, no admin required for install)
-3. Download  BANK [training_data.csv](https://drive.google.com/file/d/1jWUotyygDzeSN2uVtVjO9S2RX6OVqBDO/view?usp=sharing), copy to data/ folder.
+2. Download and extract python directly from python website [Embeddable zip x86-64 zip file](https://www.python.org/ftp/python/3.6.3/python-3.6.3-embed-amd64.zip). (Unzip, no admin required for install)
+3. Download BANK [training_data.csv](https://drive.google.com/file/d/1jWUotyygDzeSN2uVtVjO9S2RX6OVqBDO/view?usp=sharing), copy to data/ folder.
 4. Download [my cached copy of the non-embeddable pip installer](https://drive.google.com/file/d/19UgUkwO2HA97Tn2JKk3jbvrcUp6qYI9i/view?usp=sharing) taken from 3.6.8 which works in 3.6.3 embedded. (This is needed to still install python modules seen in requirements section.) You can [use this third party tool](https://www.virustotal.com/gui/) to verify these cached files.
    * Note that this little workaround is needed because Embeddable does not support pip installer by default.
    * I also provided my cached copy of pip from the admin based install, because other instructions tend to have outdated data that doesn't work.
@@ -115,7 +115,7 @@ Installation (Without Admin Privileges Workaround)
 8. Copy "god_ai_credit_card_fraud_detection_load_pretrained.py" and entire data folder, paste to (4)'s root which is the parent python embedded folder beside python exe.
 9. Download [my tkinter admin package](https://drive.google.com/file/d/135IGF7s5YAub1UxB6pqy34qK_ANFAmvj/view?usp=sharing). Tkinter is ux component taken from copy of admin install of py36.
    * You can [use this third party tool](https://www.virustotal.com/gui/) to verify these cached files.
-10. Run LAUNCH_AI_FRAUD_ANALYSER.bat to launch application.
+10. Run LAUNCH_AI_FRAUD_ANALYSER.bat to launch application.  Ensure your Python36 path from (2), and is not mine is the LAUNCH_JNCB_AI_FRAUD_ANALYSER.bat path.
    * You can load file data/_unseen_transactions_sample_1.csv for eg, with first button left, then wait while "processing" is on screen, for results. You can clear results with X/middle button before processing other samples.
    * Observe notes "NOTES_ON_ACTUAL_ANSWERS RELATED TO UNSEEN SAMPLES.txt" to see if Ai did a good job of predicting.
 
