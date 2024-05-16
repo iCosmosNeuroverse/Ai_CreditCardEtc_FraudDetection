@@ -103,7 +103,7 @@ Installation (Without Admin Privileges Workaround)
    * Note that this little workaround is needed because Embeddable does not support pip installer by default.
    * I also provided my cached copy of pip from the admin based install, because other instructions tend to have outdated data that doesn't work.
 5. In your extracted (1) folder, create dir and subdir: lib/site-packages.
-   * Copy (2)'s extracted zip such that each folder is directly under site-packages.
+   * Copy (4)'s extracted zip such that each folder is directly under site-packages.
 6. In notepad, open (1)/python36._pth, and add line at top right above "python36.zip".
 7. In cmd, install [Requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements) as usual by
 
