@@ -108,6 +108,10 @@ Installation (Without Admin Preivileges Workaround)
    b. using python -m pip <each_requirement> as normal.
    
    * Eg: python -m pip install tensorflow==2.6.2 (Install other requirements, though by default tensorflow install should add some of the requirements.
+7. Copy "god_ai_credit_card_fraud_detection_load_pretrained.py" and entire data folder, paste to (4)'s root which is the parent python embedded folder beside python exe.
+
+8. Run LAUNCH_AI_FRAUD_ANALYSER.bat to launch application.
+
 
 
 Usage
