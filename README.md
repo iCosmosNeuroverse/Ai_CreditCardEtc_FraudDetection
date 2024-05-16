@@ -102,9 +102,9 @@ Installation (Without Admin Privileges Workaround)
 4. Download [my cached copy of the non-embeddable pip installer](https://drive.google.com/file/d/19UgUkwO2HA97Tn2JKk3jbvrcUp6qYI9i/view?usp=sharing) taken from 3.6.8 which works in 3.6.3 embedded. (This is needed to still install python modules seen in requirements section.) You can [use this third party tool](https://www.virustotal.com/gui/) to verify these cached files.
    * Note that this little workaround is needed because Embeddable does not support pip installer by default.
    * I also provided my cached copy of pip from the admin based install, because other instructions tend to have outdated data that doesn't work.
-5. In your extracted (1) folder, create dir and subdir: lib/site-packages.
+5. In your extracted (2) folder, create dir and subdir: lib/site-packages.
    * Copy (4)'s extracted zip such that each folder is directly under site-packages.
-6. In notepad, open (1)/python36._pth, and add line "lib/site-packages" at top right above "python36.zip".
+6. In notepad, open (2)/python36._pth, and add line "lib/site-packages" at top right above "python36.zip".
 7. In cmd, install [Requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements) as usual by
 
    a. 1st setting path to (1)
@@ -112,7 +112,7 @@ Installation (Without Admin Privileges Workaround)
    b. using python -m pip <each_requirement> as normal.
    
    * Eg: python -m pip install tensorflow==2.6.2 (Install other [requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements), though by default tensorflow install should add some of the requirements.)
-8. Copy "god_ai_credit_card_fraud_detection_load_pretrained.py" and entire data folder, paste to (4)'s root which is the parent python embedded folder beside python exe.
+8. Copy "god_ai_credit_card_fraud_detection_load_pretrained.py" and entire data folder, paste to (2)'s lib/site-packages folder.
 9. Download [my tkinter admin package](https://drive.google.com/file/d/135IGF7s5YAub1UxB6pqy34qK_ANFAmvj/view?usp=sharing). Tkinter is ux component taken from copy of admin install of py36.
    * You can [use this third party tool](https://www.virustotal.com/gui/) to verify these cached files.
 10. Run LAUNCH_AI_FRAUD_ANALYSER.bat to launch application.  Ensure your Python36 path from (2), and is not mine is the LAUNCH_JNCB_AI_FRAUD_ANALYSER.bat path.
