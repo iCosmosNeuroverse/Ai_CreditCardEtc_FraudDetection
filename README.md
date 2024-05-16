@@ -104,22 +104,22 @@ Installation (Without Admin Privileges Workaround)
    * Note that this little workaround is needed because Embeddable does not support pip installer by default.
    * I also provided my cached copy of pip from the admin based install, because other instructions tend to have outdated data that doesn't work.
 5. In your extracted (2) folder, create dir and subdir: lib/site-packages.
-   * Copy (4)'s extracted zip such that each folder is directly under site-packages.
+   * Copy (4)'s extracted zip such that each extracted individual folder/item is directly under site-packages. So ensure the extracted contents are not in any folder, except for site-packages.
 6. In notepad, open (2)/python36._pth, and add line "lib/site-packages" at top right above "python36.zip".
 7. In cmd, install [Requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements) as usual by
 
-   a. 1st setting path to (1)
+   a. 1st setting path to (2)
    
-   b. using python -m pip <each_requirement> as normal.
+   b. using python -m pip install <each_requirement> as normal.
    
-   * Eg: python -m pip install tensorflow==2.6.2 (Install other [requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements), though by default tensorflow install should add some of the requirements.)
-8. Copy "god_ai_credit_card_fraud_detection_load_pretrained.py" and entire data folder, paste to (2)'s lib/site-packages folder.
-9. Download [my tkinter admin package](https://drive.google.com/file/d/135IGF7s5YAub1UxB6pqy34qK_ANFAmvj/view?usp=sharing). Tkinter is ux component taken from copy of admin install of py36.  Extract, and paste individual items to (2).
-   * Get [my admin instance termcolor package](https://drive.google.com/file/d/1fOsMWXTyP44an40rFzvtFRFSLgQ3vdmQ/view?usp=sharing) as well. Extract, and paste individual items to (2).
+   * Eg: python -m pip install tensorflow==2.6.2 (Install other [requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements), though by default tensorflow install should add some of the requirements. Albeit for any module reported not found, simply run the install command on the aforesaid.)
+8. Copy "god_ai_credit_card_fraud_detection_load_pretrained.py" and the entire data folder, paste to (2)'s lib/site-packages folder.
+9. Download [my tkinter admin package](https://drive.google.com/file/d/135IGF7s5YAub1UxB6pqy34qK_ANFAmvj/view?usp=sharing). Tkinter is ux component taken from copy of myadmin install of py36.  Extract, and paste individual items/folders to (2).
+   * Get [my admin instance termcolor package](https://drive.google.com/file/d/1fOsMWXTyP44an40rFzvtFRFSLgQ3vdmQ/view?usp=sharing) as well. Extract, and paste individual items/folders to (2).
    * You can [use this third party tool](https://www.virustotal.com/gui/) to verify these cached files. 
-11. Run LAUNCH_AI_FRAUD_ANALYSER.bat to launch application.  Ensure your Python36 path from (2), and is not mine is the LAUNCH_JNCB_AI_FRAUD_ANALYSER.bat path.
-   * You can load file data/_unseen_transactions_sample_1.csv for eg, with first button left, then wait while "processing" is on screen, for results. You can clear results with X/middle button before processing other samples.
-   * Observe notes "NOTES_ON_ACTUAL_ANSWERS RELATED TO UNSEEN SAMPLES.txt" to see if Ai did a good job of predicting.
+11. Run LAUNCH_AI_FRAUD_ANALYSER.bat to launch application.  Ensure your Python36 path is of/from (2), and is not mine.
+   * You can load file data/_unseen_transactions_sample_1.csv for eg, with first button (leftmost), then wait while "processing" is on screen top left, for results. You can clear results with X/middle button before processing other samples.
+   * Observe notes "NOTES_ON_ACTUAL_ANSWERS RELATED TO UNSEEN SAMPLES.txt" to confirm yourself, whether Ai did a good job of predicting.
 
 
 
