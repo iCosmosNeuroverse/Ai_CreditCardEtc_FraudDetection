@@ -235,7 +235,7 @@ class NcbAiFraudAnalyser(QWidget):
             
             self.output_string = "File Analysed : " + last_file_path + "\n\n"
 
-            self.output_string += "Transaction Acc" + space + "Prediction\n\n"
+            self.output_string += "Transaction Acc" + space + "Prediction" + space + "Probability\n\n"
             
             
             if last_file_path:
@@ -245,7 +245,7 @@ class NcbAiFraudAnalyser(QWidget):
                 for d in data:
                     rawPrediction = AI_NEURAL_AGENT.doOnlineInferenceOnRawRecord(getCn(d))
                     #print("pred " + str(rawPrediction))
-                    self.output_string += str(d[0]) + space + getPrediction(rawPrediction)  + "\n"
+                    self.output_string += str(d[0]) + space + getPrediction(rawPrediction)  + space + str(rawPrediction)  + "\n" 
                 
                 
             #self.output_field.insertPlainText(self.output_string)
