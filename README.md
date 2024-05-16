@@ -78,7 +78,7 @@ G.Bennett wrote code to:
 
 Requirements
 ==============
-Uses python 3.6.3, Requires tensorflow 2.6.2, keras, matplotlib, pandas, sklearn, seaborn, numpy installations to python.
+Uses python 3.6.3, Requires setuptools, tensorflow 2.6.2, keras, matplotlib, pandas, sklearn, seaborn, numpy installations to python.
 
 
 
