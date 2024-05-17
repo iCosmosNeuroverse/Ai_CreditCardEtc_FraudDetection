@@ -90,7 +90,7 @@ Installation (With Admin Privileges)
 1. Download [my repository](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main).
 2. Download  BANK [training_data.csv](https://drive.google.com/file/d/1jWUotyygDzeSN2uVtVjO9S2RX6OVqBDO/view?usp=sharing), copy to data/ folder.
 3. Install all python modules seen in [Requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements). (Open Cmd, set python36 path as PATH, then run "python -m pip install each_req_name" in same cmd)
-4. Ensure your Python36 path and not mine is the LAUNCH_JNCB_AI_FRAUD_ANALYSER.bat path.
+4. Ensure your Python36 path and not mine in the LAUNCH_JNCB_AI_FRAUD_ANALYSER.bat path.
    * You can load file data/_unseen_transactions_sample_1.csv for eg, with first button left, then wait while "processing" is on screen, for results. You can clear results with X/middle button before processing other samples.
    * Observe notes "NOTES_ON_ACTUAL_ANSWERS RELATED TO UNSEEN SAMPLES.txt" to see if Ai did a good job of predicting.
 
