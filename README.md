@@ -146,7 +146,7 @@ There are two ways to use this artificial neural network system:
 
 2. The quicker way: Running a pretrained model prepared by myself, that doesn't require training.
     * Run [god_ai_credit_card_fraud_detection_load_pretrained.py](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/god_ai_credit_card_fraud_detection_load_pretrained.py) from the data folder in this repository.
-    * Ensure [95.66%_saved_bank_neural_network_weights.h5](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/data/95.66__saved_bank_neural_network_weights.h5) is in the data folder of this repository.
+    * Ensure [95.66%_saved_bank_neural_network_weights.h5](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/blob/main/data/95.66%25_saved_BANK_neural_network_weights.h5) is in the data folder of this repository.
     * Ensure the files above are in the directory of the csv file from the "[Installation](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#Installation)" step of this repository.
     * To make predictions, do the same steps done in the training phase above, **particularly, starting from** "Run the trained neural network...".
 
