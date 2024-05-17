@@ -132,7 +132,7 @@ There are two ways to use this artificial neural network system:
         * Note that most columns in the data\...training_data.csv_** file are masked, and known to SASS payments team or other Prime related members only. You can request this information.
     * Run the trained neural network, and make some predictions.
         * **Training** is done by simply running the python file, and awaiting the neural network's processing for about 15 epochs.
-            * A successful run will look [like this image](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/data/95.66__bank_data_successful_run.png).
+            * A successful run will look [like this image](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/blob/main/data/95.66%25_bank_data_successful_run.png).
         * While making a prediction, take note of the "FRAUDFLAG" column, which lables each transaction in dataset as 1 or 0 (where 1=fraud, 0=not fraudulent):
             * There are 299,999 records in dataset csv, and of those, the training process used the first 70%.
             * To really test the neural network, means to expose it to a record it didn't see in training.
