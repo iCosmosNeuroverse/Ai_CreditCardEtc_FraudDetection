@@ -6,6 +6,8 @@ Using GUI "LAUNCH_JNCB_AI_FRAUD_ANALYSER.bat"
 
 ~ JNCB ~ Jamaica Neural Network Credit Card Bank - Ai System
 
+~ A credit card fraud system I explored, which I proposed that banks to use.
+
 
 
 ![alt text](GUI_SCREEN.png "Title Text")
@@ -19,10 +21,10 @@ You can load the following files for testing:
 * data/_seen_unseen_mix_transaction_sample_1.csv (A mixture of seen and unseen samples unseen by ai in training, to test both memory and generalization)
 
 
-Using PythonShelll "god_ai_credit_card_fraud_detection_load_pretrained.py"
+Using PythonShelll "cosmos_ai_credit_card_fraud_detection_load_pretrained.py"
 ======
 
-![alt text]( https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/blob/main/data/prediction%20on%20a%20single%20entry.png "Title Text")
+![alt text](https://github.com/iCosmosNeuroverse/Ai_CreditCardEtc_FraudDetection/blob/main/data/prediction%20on%20a%20single%20entry.png "Title Text")
 
 # JNCB = Jamaica Neural Network Credit Card Bank - Ai System
 
@@ -49,7 +51,7 @@ Quick explanation of how this neural network works
 4. In testing aka inference (simulating when a single customer does a payment etc); expose neural network to unlabelled transactions. 
     * Neural network then produces a float value between 0 and 1 for each unlabelled transaction, where value closer to 1 indicates prediction of fraud, while closer to 0 indicates non-fraud.
 
-See [this seminar lead by G.Bennett Bennett, concerning basic artificial neural networks](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/blob/main/GOD%20Ai%20Seminar.pdf).
+See [this seminar lead by C.Bennett Bennett, concerning basic artificial neural networks](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/blob/main/COSMOS%20Ai%20Seminar.pdf).
 
 
 
@@ -61,7 +63,7 @@ by Manuel on Kaggle: https://www.kaggle.com/manoloesparta/neural-network-accurac
 
 Modified Code (402 lines)
 ==============
-by God Bennett. 
+by Cosmos Bennett. 
 
 * This code achieves an accuracy of ~95% on Bank masked dev transaction data.
 
@@ -113,7 +115,7 @@ Installation (Without Admin Privileges Workaround)
    b. using python -m pip install <each_requirement> as normal.
    
    * Eg: python -m pip install tensorflow==2.6.2 (Install other [requirements](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#requirements), though by default tensorflow install should add some of the requirements. Albeit for any module reported not found, simply run the install command on the aforesaid.)
-8. Copy "god_ai_credit_card_fraud_detection_load_pretrained.py" and the entire data folder, paste to (2)'s lib/site-packages folder.
+8. Copy "cosmos_ai_credit_card_fraud_detection_load_pretrained.py" and the entire data folder, paste to (2)'s lib/site-packages folder.
 9. Download [my tkinter admin package](https://drive.google.com/file/d/135IGF7s5YAub1UxB6pqy34qK_ANFAmvj/view?usp=sharing). Tkinter is ux component taken from copy of myadmin install of py36.  Extract, and paste individual items/folders to (2).
    * Get [my admin instance termcolor package](https://drive.google.com/file/d/1fOsMWXTyP44an40rFzvtFRFSLgQ3vdmQ/view?usp=sharing) as well. Extract, and paste individual items/folders to (2).
    * You can [use this third party tool](https://www.virustotal.com/gui/) to verify these cached files. 
@@ -137,7 +139,7 @@ There are two ways to use this artificial neural network system:
             * There are 299,999 records in dataset csv, and of those, the training process used the first 70%.
             * To really test the neural network, means to expose it to a record it didn't see in training.
             * Copy any record after cell 210,000 **(except for the last column which is the label)**. Records after 210,000 are outside of the "70%" training set.
-            * Paste the copied record into python shell after neural network training ran, as parameter "newTransactionRecordString" from function [god_ai_credit_card_fraud_detection_train_from_scratch.py](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/god_ai_credit_card_fraud_detection_train_from_scratch.py)/ doOnlineInferenceOnRawRecord ( newTransactionRecordString ).
+            * Paste the copied record into python shell after neural network training ran, as parameter "newTransactionRecordString" from function [cosmos_ai_credit_card_fraud_detection_train_from_scratch.py](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/cosmos_ai_credit_card_fraud_detection_train_from_scratch.py)/ doOnlineInferenceOnRawRecord ( newTransactionRecordString ).
             * Take note of the result.
                 * Eg a: Record A223999 is labelled 0, and neural net prediction is accurate at 0.029. (Closer to 0) See **data/notFraudulent_onlineInferenceOnRecord_sample.png**.
 				
@@ -145,7 +147,7 @@ There are two ways to use this artificial neural network system:
              
 
 2. The quicker way: Running a pretrained model prepared by myself, that doesn't require training.
-    * Run [god_ai_credit_card_fraud_detection_load_pretrained.py](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/god_ai_credit_card_fraud_detection_load_pretrained.py) from the data folder in this repository.
+    * Run [cosmos_ai_credit_card_fraud_detection_load_pretrained.py](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/cosmos_ai_credit_card_fraud_detection_load_pretrained.py) from the data folder in this repository.
     * Ensure [95.66%_saved_bank_neural_network_weights.h5](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/blob/main/data/95.66%25_saved_BANK_neural_network_weights.h5) is in the data folder of this repository.
     * Ensure the files above are in the directory of the csv file from the "[Installation](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main#Installation)" step of this repository.
     * To make predictions, do the same steps done in the training phase above, **particularly, starting from** "Run the trained neural network...".
@@ -166,7 +168,7 @@ It is important to guage how well an ai model is doing, in ai research and imple
     * **Total incorrect predictions** or MME ~ Mean Misclassification Error or ‘false items’ = (false positives + false negatives)/Total = (3708 + 197)/90000 = (3708 + 197)/90000 ~ 0.043% inaccuracy. This is better than the standard of around 0.1. [>= 0.1 may signify bad performance](https://fraud-detection-handbook.github.io/fraud-detection-handbook/Chapter_4_PerformanceMetrics/ThresholdBased.html).
 
 
-Invoking the function "showConfusionMatrix()" in [god_ai_credit_card_fraud_detection_train_from_scratch.py](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/god_ai_credit_card_fraud_detection_train_from_scratch.py) reveals the confusion matrix:
+Invoking the function "showConfusionMatrix()" in [cosmos_ai_credit_card_fraud_detection_train_from_scratch.py](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/tree/main/cosmos_ai_credit_card_fraud_detection_train_from_scratch.py) reveals the confusion matrix:
 
 
 ![alt text](https://github.com/g0dEngineer/Ai_CreditCardEtc_FraudDetection/blob/main/data/95.66%25_bank_data_confusion_matrix.png "Title Text")
