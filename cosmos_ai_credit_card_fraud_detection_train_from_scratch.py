@@ -1,13 +1,13 @@
-#Author: God Bennett
+#Author: Cosmos Bennett
 
 
 #Original Code (55 lines) by Manuel on Kaggle: https://www.kaggle.com/manoloesparta/neural-network-accuracy-99-93
 
 
-#Modified Code (402 lines) by God Bennett 
+#Modified Code (402 lines) by Cosmos Bennett 
 
  
-#God Bennett  wrote code to:
+#Cosmos Bennett  wrote code to:
 #1. Perform individual testing of new transactions, (aka "online inferencing"), to simulate real-time processing of single transactions.
 
 #2. Perform crucial machine learning driven data imputation, since NCB transaction data may have missing values.
@@ -17,7 +17,7 @@
 #4. Perform lecun_normal initialization, instead of default "uniform" found in original code, for accuracy improvement.  See pool of initializers at documentation site: https://keras.io/initializers/
 
 
-# Note by God Bennett : Uses python 3.6, Requires keras, matplotlib, pandas, sklearn, numpy and tensorflow installations to python.
+# Note by Cosmos Bennett : Uses python 3.6, Requires keras, matplotlib, pandas, sklearn, numpy and tensorflow installations to python.
 # Epochs end at Epoch 5/5.
 
 
@@ -27,20 +27,20 @@ import pandas as pd
 import numpy as np
 
 ###############################################
-#begin God Bennett 
+#begin Cosmos Bennett 
 import datetime
 print('start time '+str(datetime.datetime.now()))
-#end God Bennett 
+#end Cosmos Bennett 
 ###############################################
 print("...training neural network on jncb dev transaction data" );
 
 # read data
 
-data = pd.read_csv('data/_training_data.csv') #Edited by God Bennett  to point to local creditcard directory
+data = pd.read_csv('data/_training_data.csv') #Edited by Cosmos Bennett  to point to local creditcard directory
 
 
-###############################################God Bennett _function_0
-#begin God Bennett _code impute missing values using BayesianRidge
+###############################################Cosmos Bennett _function_0
+#begin Cosmos Bennett _code impute missing values using BayesianRidge
 from sklearn.experimental import enable_iterative_imputer  # noqa
 from sklearn.impute import IterativeImputer
 from sklearn.linear_model import BayesianRidge
@@ -58,11 +58,11 @@ data = getImputation(data)
 #establish imputed data frame in terms of default columns and indices from file
 data.columns = data_default.columns
 data.index = data_default.index
-###############################################end God Bennett _function_0
+###############################################end Cosmos Bennett _function_0
 
 
-###############################################God Bennett _function_1
-#Begin God Bennett _code to render pie visualization of fraudulent transactions vs non-fraudlent transactions wrt training data
+###############################################Cosmos Bennett _function_1
+#Begin Cosmos Bennett _code to render pie visualization of fraudulent transactions vs non-fraudlent transactions wrt training data
 import matplotlib.pyplot as plt 
 def plotFraudVsNonFraudVisualization_Histogram_WrtDataset ( ):
        fig1, (ax1, ax2) = plt.subplots(2, 1, sharex=True, figsize=(12,4))
@@ -86,13 +86,13 @@ def plotFraudVsNonFraudVisualization_Histogram_WrtDataset ( ):
        plt.show()
 
 plotFraudVsNonFraudVisualization_Histogram_WrtDataset ( )
-#End God Bennett _code to render pie visualization of fraudulent transactions vs non-fraudlent transactions wrt training data
-###############################################end God Bennett _function_1
+#End Cosmos Bennett _code to render pie visualization of fraudulent transactions vs non-fraudlent transactions wrt training data
+###############################################end Cosmos Bennett _function_1
 
 
-###############################################begin God Bennett _code to specify dimensions before training
+###############################################begin Cosmos Bennett _code to specify dimensions before training
 inputDimensions = 65 ##Corresponds to number of non-class columns in ncb input data file.
-##end God Bennett  code to specify dimension before training
+##end Cosmos Bennett  code to specify dimension before training
 epochCount = 15 ##default: 5
 batchCount = 10 ##default: 10
 ###############################################begin original_code 
@@ -130,7 +130,7 @@ from keras.layers import Dropout
 
 # create the neural network
 
-#God Bennett _edit: initializers changed from uniform to lecun_normal alternative kernel_initializer from pool of initializers at documentation site: https://keras.io/initializers/
+#Cosmos Bennett _edit: initializers changed from uniform to lecun_normal alternative kernel_initializer from pool of initializers at documentation site: https://keras.io/initializers/
 from keras import initializers
 
 clas = Sequential()
@@ -140,7 +140,7 @@ clas.add(Dense(units=14,kernel_initializer=initializers.lecun_normal(seed=None),
 clas.add(Dropout(rate=0.1))
 clas.add(Dense(units=1,kernel_initializer='random_uniform',activation='sigmoid'))
 clas.compile(optimizer = 'adam', loss = 'binary_crossentropy', metrics = ['accuracy'])
-#end God Bennett  modification.
+#end Cosmos Bennett  modification.
 
 """
 default_neural network setup
@@ -168,8 +168,8 @@ print('Error',scores[0],'\nAccuracy',scores[1])
 
 
 
-###############################################God Bennett _function_2
-#Begin God Bennett _code to render pie visualization of fraudulent transactions vs non-fraudlent transactions wrt trained neural network
+###############################################Cosmos Bennett _function_2
+#Begin Cosmos Bennett _code to render pie visualization of fraudulent transactions vs non-fraudlent transactions wrt trained neural network
 predictions_tr = clas.predict_classes ( X_train, verbose=0)
 predictions_te = clas.predict_classes ( X_test, verbose=0)
 predictions = np.append(predictions_tr, predictions_te)
@@ -216,13 +216,13 @@ def plotFraudVsNonFraudVisualization_PieChart_WrtTrainedNeuralNetwork():
 
     plt.show()
 plotFraudVsNonFraudVisualization_PieChart_WrtTrainedNeuralNetwork ( )
-#End God Bennett _code to render pie visualization of fraudulent transactions vs non-fraudlent transactions wrt trained neural network
-###############################################end God Bennett _function_2
+#End Cosmos Bennett _code to render pie visualization of fraudulent transactions vs non-fraudlent transactions wrt trained neural network
+###############################################end Cosmos Bennett _function_2
 
 
 
-###############################################God Bennett _function_3
-#God Bennett  function 3 to add online inference or real time test capability to the model.
+###############################################Cosmos Bennett _function_3
+#Cosmos Bennett  function 3 to add online inference or real time test capability to the model.
 """
 This function does a prediction from test data that has been converted/transformed to a separate form that
 differs from their form in the excel input file "creditcard.csv".
@@ -237,13 +237,13 @@ def doOnlineInference(i):
 	print('------>Training Record' + str (np.array(sc.inverse_transform(X[i]), dtype="O"))) 
 	print('>>>>>>>>>>>>>>')
 	print('------------->Expected=%.1f, Predicted=%.1f' % (testy, yhat))
-##############################################end God Bennett _function_3
+##############################################end Cosmos Bennett _function_3
 
 
 
 	
-###############################################God Bennett _function_4
-####God Bennett  function 4 to add online inference or real time test capability to the model.
+###############################################Cosmos Bennett _function_4
+####Cosmos Bennett  function 4 to add online inference or real time test capability to the model.
 """
 This function does a prediction from test data that has been taken directly from excel input file "creditcard.csv".
 (before which it is sorrounded by array braces, and written with commas)
@@ -307,12 +307,12 @@ def doOnlineInferenceOnRawRecord ( newTransactionRecordString ):
        #finally, float and round the resulting string value that emerges from "remove_exponent" function.
        return round(float(remove_exponent(clas.predict (X_grown[len(X_grown)-1].reshape (1,inputDimensions), batch_size=1) [0][0])),4)
 
-###############################################God Bennett _function_4
+###############################################Cosmos Bennett _function_4
 
        
        
-###############################################God Bennett _function_5
-####God Bennett  function 5 to produce confusion matrix based on the neural network output.
+###############################################Cosmos Bennett _function_5
+####Cosmos Bennett  function 5 to produce confusion matrix based on the neural network output.
 """
 ~~forward slash aka diagnoal shows true positives and true negtives, all other cells show wrong predictions. 
 
@@ -336,11 +336,11 @@ def showConfusionMatrix():
        print('Classification report: \n',classification_report(y_test,y_pred))
        sns.heatmap(cm, annot=True, fmt='.0f', cmap='cividis_r')
        plt.show()
-###############################################God Bennett _function_5
+###############################################Cosmos Bennett _function_5
 
 """
-###############################################God Bennett _function_6
-#Begin God Bennett _code to render tSNE visualization of fraudulent transactions vs non-fraudlent transactions wrt trained neural network
+###############################################Cosmos Bennett _function_6
+#Begin Cosmos Bennett _code to render tSNE visualization of fraudulent transactions vs non-fraudlent transactions wrt trained neural network
 #Note this code works, but it takes a 3 minutes to render. The pie char should give a good representation of the outcome, albeit.
 
 from sklearn.manifold import TSNE
@@ -381,12 +381,12 @@ def plotFraudVsNonFraudVisualization_TDistributedStochasticNeighbourEmbedding_Wr
 	plt.title('t-SNE visualization of test data')
 	plt.show()
 plotFraudVsNonFraudVisualization_TDistributedStochasticNeighbourEmbedding_WrtTrainedNeuralNetwork ( )
-#End God Bennett _code to render tSNE visualization of fraudulent transactions vs non-fraudlent transactions wrt trained neural network
-###############################################end God Bennett _function_6
+#End Cosmos Bennett _code to render tSNE visualization of fraudulent transactions vs non-fraudlent transactions wrt trained neural network
+###############################################end Cosmos Bennett _function_6
 """
 
 
-###############################################God Bennett _function_7 save and load model
+###############################################Cosmos Bennett _function_7 save and load model
 from keras.models import load_model
 
 def saveModel ( directory ):
@@ -395,7 +395,7 @@ def saveModel ( directory ):
 def loadModel ( directory ):
        clas.load_model ( directory )
 
-###############################################end God Bennett _function_7
+###############################################end Cosmos Bennett _function_7
 
 
 """function used to remove exponent from value, to a more readable format
@@ -421,9 +421,9 @@ def remove_exponent(value):
        
 
 ###############################################
-#begin God Bennett _code to report end time
+#begin Cosmos Bennett _code to report end time
 print('end time '+str(datetime.datetime.now()))
-#end God Bennett _code to report end time
+#end Cosmos Bennett _code to report end time
 ###############################################
 
 
