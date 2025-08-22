@@ -1,11 +1,11 @@
-#Author: God Bennett
-#God's Ai Neural Net Fraud Analysis Tool v0.1
+#Author: Cosmos Bennett
+#Cosmos's Ai Neural Net Fraud Analysis Tool v0.1
 #Uses neural network to do credit card fraud detection
 
 
 
 ############
-#God's installation notes
+#Cosmos's installation notes
 
 #1. get python 3.63
 
@@ -14,7 +14,7 @@
 
 print("Loading Ai Module ...")
 
-import god_ai_credit_card_fraud_detection_load_pretrained as AI_NEURAL_AGENT
+import cosmos_ai_credit_card_fraud_detection_load_pretrained as AI_NEURAL_AGENT
 
 from PyQt5.QtWidgets import QApplication, QWidget, QVBoxLayout, QHBoxLayout, QLabel, QLineEdit, QPushButton, QToolButton, QTextEdit
 from PyQt5.QtGui import QFont, QIcon
@@ -33,13 +33,13 @@ from tkinter import filedialog
 class NcbAiFraudAnalyser(QWidget):
     def __init__(self):
         super().__init__()
-        self.setWindowTitle("God Ai Neural Fraud Analyser")
+        self.setWindowTitle("Cosmos Ai Neural Fraud Analyser")
         self.setGeometry(200, 200, 800, 850)
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.output_text = "";
         
         # Create the title label
-        title_label = QLabel("God Ai Neural Fraud Analyser", self)
+        title_label = QLabel("Cosmos Ai Neural Fraud Analyser", self)
         title_label.setFont(QFont('Segoe UI', 40))
         title_label.setAlignment(Qt.AlignHCenter | Qt.AlignTop)
         title_label.setFixedHeight(70)
