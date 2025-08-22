@@ -10,7 +10,7 @@ Using GUI "LAUNCH_JNCB_AI_FRAUD_ANALYSER.bat"
 
 
 
-![alt text](GUI_SCREEN_.png "Title Text")
+![alt text](GUI_SCREEN.png "Title Text")
 
 Run batch launcher, use file icon to load transactions and generate predictions, and the plane icon to save predictions.
 Big X Icon toggling, clears predictions. Predictions are saved to predictions.txt file.
