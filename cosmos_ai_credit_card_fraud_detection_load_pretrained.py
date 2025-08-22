@@ -1,4 +1,4 @@
-#Author God Bennett. 
+#Author Cosmos Bennett. 
 #Simple test to load saved model.
 #To do further testing one may simply copy the onlineInference functions doOnlineInferenceOnRawRecord
 from keras.models import load_model
