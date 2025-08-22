@@ -24,7 +24,7 @@ You can load the following files for testing:
 Using PythonShelll "cosmos_ai_credit_card_fraud_detection_load_pretrained.py"
 ======
 
-![alt text](https://github.com/iCosmosNeuroverse/Ai_CreditCardEtc_FraudDetection/blob/main/data/prediction%20on%20a%20single%20entry.png "Title Text")
+![alt text](https://github.com/iCosmosNeuroverse/Ai_CreditCardEtc_FraudDetection/blob/main/data/prediction%20on%20a%20single%20entry_.png "Title Text")
 
 # JNCB = Jamaica Neural Network Credit Card Bank - Ai System
 
